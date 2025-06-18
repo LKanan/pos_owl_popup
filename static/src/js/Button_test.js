@@ -21,13 +21,18 @@ class ButtonTest extends PosComponent {
         //     body: "You have clicked the button successfully!",
         // })
 
-        const{confirmed} = await this.showPopup("ConfirmPopup",{
-            title: "Error message",
-            body: "You have clicked the button successfully!",
-            confirmText: "OK",
-            cancelText: "Cancel"
+        // const{confirmed} = await this.showPopup("ConfirmPopup",{
+        //     title: "Error message",
+        //     body: "You have clicked the button successfully!",
+        //     confirmText: "OK",
+        //     cancelText: "Cancel"
+        // })
+        // console.log("Button clicked! ", confirmed)
+
+        this.showPopup("OfflineErrorPopup", {
+            title: "Custom Popup",
+            body: "Ceci est un popup personnalisé",
         })
-        console.log("Button clicked! ", confirmed)
     }
 }
 Registries.Component.add(ButtonTest)
