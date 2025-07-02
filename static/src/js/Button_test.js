@@ -16,11 +16,15 @@ class ButtonTest extends PosComponent {
         // - "ErrorPopup"
         // - "ConfirmPopup"
 
+        // popup d'erreur
+        // ==============
         // this.showPopup("ErrorPopup",{
         //     title: "Error message",
         //     body: "You have clicked the button successfully!",
         // })
 
+        // popup de confirmation
+        // ===================
         // const{confirmed} = await this.showPopup("ConfirmPopup",{
         //     title: "Error message",
         //     body: "You have clicked the button successfully!",
@@ -29,9 +33,36 @@ class ButtonTest extends PosComponent {
         // })
         // console.log("Button clicked! ", confirmed)
 
-        this.showPopup("OfflineErrorPopup", {
-            title: "Custom Popup",
-            body: "Ceci est un popup personnalisé",
+        // popup personnalisé utilisant le popup "OfflineErrorPopup"
+        // =========================================================
+        // this.showPopup("OfflineErrorPopup", {
+        //     title: "Custom Popup",
+        //     body: "Ceci est un popup personnalisé",
+        // })
+
+    //     popup de selection
+    //     const {confirmed, payload:selectedOption}= await this.showPopup("SelectionPopup",{
+    //         title: "Choisissez une option",
+    //         body: "Sélectionnez une des options suivantes :",
+    //         list: [
+    //             { 'id':0 ,'label': "Option 1", 'item': "option1" },
+    //             { 'id':0 ,'label': "Option 2", 'item': "option2" },
+    //             { 'id':0 ,'label': "Option 3", 'item': "option3" },
+    //         ],
+    //         confirmText: "OK",
+    //         cancelText: "Annuler"
+    //     })
+    //
+    //     console.log(confirmed, selectedOption)
+    //     const info = await this.env.pos.getClosePosInfo()
+    //     this.showPopup("ClosePosPopup", {
+    //         info: info,
+    //         keepBehind: true,
+    //     })
+        this.showPopup("EditListPopup", {
+            title: "Edit List Popup",
+            // info: info,
+            // keepBehind: true,
         })
     }
 }

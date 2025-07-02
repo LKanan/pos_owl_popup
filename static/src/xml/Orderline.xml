@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//span[hasclass('product-name')]" position="inside">
+            <t t-if="code &amp;&amp; code.type === 'lot'">
+            <LotSelectionButton/>
+            </t>
+        </xpath>
+    </t>
+</templates>
